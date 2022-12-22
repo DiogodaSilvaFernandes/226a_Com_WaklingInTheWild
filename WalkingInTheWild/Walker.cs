@@ -44,6 +44,9 @@
 
         public void LoadBagpack(List<Cloth> cloths)
         {
+            if (_bagpack == null)
+                throw new WalkerDoesntCarryABagpackException();
+
             foreach (Cloth cloth in cloths)
             {
                 _bagpack?.Add(cloth);
@@ -52,6 +55,9 @@
 
         public void LoadBagpack(List<Equipment> equipments)
         {
+            if (_bagpack == null)
+                throw new WalkerDoesntCarryABagpackException();
+
             foreach (Equipment equipment in equipments)
             {
                 _bagpack?.Add(equipment);
