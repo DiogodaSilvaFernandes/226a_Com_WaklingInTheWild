@@ -36,6 +36,9 @@
 
         public void DropBagpack()
         {
+            if (_bagpack == null)
+                throw new WalkerDoesntCarryABagpackException();
+
             _bagpack = null;
         }
 
