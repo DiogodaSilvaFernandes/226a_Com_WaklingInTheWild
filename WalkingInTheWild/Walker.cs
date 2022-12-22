@@ -31,6 +31,9 @@
 
         public void TakeBagpack(Bagpack bagpack)
         {
+            if (_bagpack != null)
+                throw new WalkerAlreadyCarriesABagpackException();
+
             _bagpack = bagpack;
         }
 
